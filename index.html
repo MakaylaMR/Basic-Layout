@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script src="../Basic Layout/script/main.js" defer></script>
   <title>Basic Layout</title>
 </head>
 <body>
   <section class="container">
-    <header class="head">
+      <header class="head">
       <!-- nav-wrapper start-->
       <div class="nav-wrapper">
         <input id="toggle" type="checkbox">
@@ -28,6 +29,10 @@
           </ul>
         </nav>
         <!--nav-menu end-->
+        <section class="btn">
+          <p id="mode">Light Mode Activated</p>
+          <input class="button" type="button" id="button" value="Night Mode" onclick="updateBackground()">
+        </section>
       </div>
       <!--nav wrapper end-->
     </header>
@@ -39,7 +44,7 @@
       <button>Register</button>
     </div>
   </section>
-  <footer>
+  <footer class="footer">
     <p>&copy Copyright 2021 by Makayla M.R. All rights reserved.</p>
   </footer>
 </body>
