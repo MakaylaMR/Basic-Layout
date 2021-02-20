@@ -88,7 +88,7 @@ label {
 /*Hero section*/
 
 .hero {
-  /* display:grid to have more control over child elements, specifically the button */
+  /* display grid to have more control over child elements, specifically the button */
   display: grid;
 
   text-align:center;
@@ -119,7 +119,7 @@ button:hover {
 /*h1 and p margin 0 allow them to be closer together, looks better*/
 h1 {
   margin:0;
-  
+
   /*in night mode makes the hero section look pretty*/
   padding:0.5rem;
 
