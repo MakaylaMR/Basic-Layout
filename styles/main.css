@@ -62,6 +62,7 @@ a:hover {
 }
 
 /*header => div => nav => ul => li => .jeep*/ul .jeep {
+  /*this is for the first li element, I put it to the left of the grid to make it seem as if it was separate from the li elements, like a logo*/
   justify-self: start;
 }
 
