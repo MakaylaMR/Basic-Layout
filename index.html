@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>Basic Layout</title>
+</head>
+<body>
+  <section class="container">
+    <header class="head">
+      <!-- nav-wrapper start-->
+      <div class="nav-wrapper">
+        <input id="toggle" type="checkbox">
+        <label for="toggle"><i class="fas fa-bars" id="hamburger"></i></label>
+        <!--nav-menu start-->
+        <nav class="nav-menu">
+          <ul>
+              <!--had to specify list items as I wanted the "Jeep" list to be different than the rest.-->
+            <li class="jeep"><a href="#">Jeep</a></li>
+            <li><a href="#team">The Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <!--nav-menu end-->
+      </div>
+      <!--nav wrapper end-->
+    </header>
+    <!--had to add a div since using grid. without div the height was applied to the button element and me no likey-->
+    <div class="hero">
+        <!--Typically, if using a multi page site this should not be a h1. But for the purpose of the exercise its easier and prettier-->
+      <h1>Hello World</h1>
+      <p>The Wilderness Must be Explored!</p>
+      <button>Register</button>
+    </div>
+  </section>
+  <footer>
+    <p>&copy Copyright 2021 by Makayla M.R. All rights reserved.</p>
+  </footer>
+</body>
+</html>

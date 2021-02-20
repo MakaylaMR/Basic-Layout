@@ -1,0 +1,197 @@
+/*this is the section part of the html.. includes header*/
+
+/*section = */.container {
+  display: grid;
+
+  min-height: 100vh;
+
+  align-items: center;
+
+  /*styling the hero section (image)*/
+  background-image: url(https://picsum.photos/1200/1000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment:fixed;
+
+  /*background colour optional*/
+  background-color:rgb(153, 153, 102);
+}
+
+
+/*header + nav bar*/
+
+/*header = */.head {
+  /*makes it so the nav bar + hamburger menu is located at the very top of the page*/
+  align-self: start;
+}
+
+/*header => div => nav => ul => li*/header li {
+  /*on larger screens makes it the listed elements (under nav => ul => li) positioned to the right of the grid cell*/
+  justify-self: end;
+}
+
+/*header => div => nav => ul => li => a*/a {
+  /*adds padding around li elements*/
+  padding: 0.5rem;
+
+  /*removes underline for links*/
+  text-decoration: none;
+
+  color:  rgb(255,255,255);
+}
+a:hover {
+  /*when hovering over li elements this is the background color*/
+  background-color: rgb(153, 128, 102);
+}
+
+/*header => div => nav => ul*/ul {
+  display: grid;
+  /*change the "5" to the amount of li elements you have */
+  grid-template-columns: repeat(5, auto);
+
+  background-color: rgb(0,0,0);
+
+  /*gives the ul padding (the black bar at the top of the page)*/
+  padding: 0.5rem;
+}
+
+/*header => div => nav => ul => li => .jeep*/ul .jeep {
+  justify-self: start;
+}
+
+/*hamburger menu **NOTE** actual hamburger menu is in the media querie below, this is to ensure parts of the html meant for hamburger menu do not show up on larger screens*/
+
+.nav-wrapper [type=checkbox] {
+  /*removes checkbox*/
+  display:none;
+}
+
+#hamburger {
+  /*honestly not sure why I chose position:relative; it worked and did the job so ?*/
+  position: relative;
+
+  /*index of -1 make it so the checkbox is hidden*/
+  z-index: -1;
+}
+
+label {
+  /*this removes whitespace above the header, only applies to larger screens*/
+  display:none;
+}
+
+/*Hero section*/
+
+.hero {
+  /* display:grid to have more control over child elements, specifically the button */
+  display: grid;
+
+  text-align:center;
+
+  /*if not align-self:start, "Hello World" container would be located in the middle of the grid cell, so lower down the page*/
+  align-self: start;
+
+  /*margin so the container doesnt expand all the way across the page,
+  - using margin-left and margin-right does not make it responsive, the "hello world" and subscribe button goes off the page in mobile, however, this makes it so that the box is not centered in the hero section.*/
+  
+  margin:auto;
+}
+
+button {
+  /* without margin:auto subscribe button took up entire grid cell */
+  margin:auto;
+}
+
+button:hover {
+  background-color:	rgb(153, 128, 102);
+}
+
+/*h1 and p margin 0 allow them to be closer together, looks better*/
+h1 {
+  margin:0;
+}
+
+.hero p {
+  margin:0;
+}
+
+/*footer*/
+
+footer {
+  /*aligns text in the middle*/
+  text-align: center;
+}
+
+footer p {
+  /*gives it a smaller footer (vertically)*/
+  margin:0;
+}
+
+footer {
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+
+  padding-top: 1rem;
+  padding-bottom:1rem;
+}
+
+
+/*making it responsive with media queries*/
+@media screen and (max-width: 42.7rem) {
+  ul {
+    /*makes it so the list is stacked vertically*/
+    display: block;
+
+    /*aligns text in the ul in the center*/
+    text-align: center;
+
+    padding:1rem;
+  }
+
+  li {
+    /*gives padding between the li elements*/
+    padding: 0.5rem;
+  }
+
+/*hamburger menu*/
+
+  .nav-wrapper [type=checkbox] {
+    /*removes the checkbox*/
+    display:none;
+  }
+  
+  .nav-menu {
+    /*makes it so you can open and close the hamburger menu*/
+    display:none;
+  }
+  
+  #toggle:checked ~ * ~ .nav-menu {
+    /*this says when the "checkbox" is clicked then all of the nav-menu (nav) elements show up as display block*/
+    display:block;
+  }
+  #hamburger {
+    /*this overrides the z-index:-1; allowing it to show up on on smaller screen widths*/
+    z-index: 1;
+
+    /*colour of the icon*/
+    color:rgb(255,255,255);
+
+    /*padding was used to position the icon relative to the label element*/
+    padding-right: 0.7rem;
+    padding-top: 0.5rem;
+
+
+    /*added cursor so it's more obviously clickable*/
+    cursor: pointer;
+  }
+  
+  label {
+    /*chose absolute because I wanted to move the label relative to it's parent element; which is the div .nav-wrapper. wanted this so i could move the icon to the very right of the div*/
+    position:absolute;  
+
+    /*display inline-block enveloped the hamburger menu icon perfectly*/
+    display:inline-block;
+
+    right:0;
+  }
+}
