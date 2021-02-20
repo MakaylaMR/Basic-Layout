@@ -1,5 +1,5 @@
 /*this is for the night mode*/
-.night-mode ~ * ~ .head .nav-wrapper, .nav-menu .btn .footer{
+.night-mode * {
   color: #FFF;
   background-color: #000;
 }
@@ -100,6 +100,11 @@ label {
   - using margin-left and margin-right does not make it responsive, the "hello world" and subscribe button goes off the page in mobile, however, this makes it so that the box is not centered in the hero section.*/
   
   margin:auto;
+
+  /*in night mode makes the hero section look pretty*/
+  padding:0.5rem;
+
+  border-radius: 1rem;
 }
 
 button {
@@ -114,6 +119,11 @@ button:hover {
 /*h1 and p margin 0 allow them to be closer together, looks better*/
 h1 {
   margin:0;
+  
+  /*in night mode makes the hero section look pretty*/
+  padding:0.5rem;
+
+  border-radius: 1rem;
 }
 
 .hero p {
